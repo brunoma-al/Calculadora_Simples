@@ -8,7 +8,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+
+    double firstNum;
+    String operation;
 
     private Button numeroZero, numeroUm, numeroDois, numeroTres, numeroQuatro, numeroCinco, numeroSeis, numeroSete, numeroOito, numeroNove, ponto, soma, subtrair, multiplicar, dividir, igual, limpar;
 
@@ -21,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         IniciarComponentes();
-        getSupportActionBar().hide();
+        getSupportActionBar();
     }
 
     private void IniciarComponentes() {
@@ -42,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
         dividir = findViewById(R.id.btn_Dividir);
         igual = findViewById(R.id.btn_Igual);
         limpar = findViewById(R.id.btn_Limpar);
+        txtExpressao = findViewById(R.id.txt_Expressao);
+        txtResultado = findViewById(R.id.txt_Resultado);
+
+        limpar.setOnClickListener(view -> {
+            firstNum = 0;
+            txtExpressao.setText("0");
+        });
+
+       // ArrayList<Button>;
+
     }
 
     public void AcrescentarUmaExpressao(String string, boolean limpar_dados) {
