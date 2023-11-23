@@ -10,10 +10,10 @@
 
 
     <TextView
-        android:id="@+id/txt_expressao"
+        android:id="@+id/txt_Expressao"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:text="5+5"
+        android:text=""
         android:textSize="55sp"
         android:textColor="@color/black"
         android:gravity="end"
@@ -23,10 +23,10 @@
         />
 
     <TextView
-        android:id="@+id/txt_resultado"
+        android:id="@+id/txt_Resultado"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="10"
+        android:text=""
         android:textSize="35sp"
         android:textColor="@color/black"
         android:gravity="end"
@@ -61,17 +61,17 @@
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/numero_sete"
+            android:id="@+id/numero_Sete"
             style="@style/Numbers_Button"
             android:text="7"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/numero_oito"
+            android:id="@+id/numero_Oito"
             style="@style/Numbers_Button"
             android:text="8" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/numero_nove"
+            android:id="@+id/numero_Nove"
             style="@style/Numbers_Button"
             android:text="9" />
 
@@ -89,17 +89,17 @@
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/numero_quatro"
+            android:id="@+id/numero_Quatro"
             style="@style/Numbers_Button"
             android:text="4" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/numero_cinco"
+            android:id="@+id/numero_Cinco"
             style="@style/Numbers_Button"
             android:text="5" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/numero_seis"
+            android:id="@+id/numero_Seis"
             style="@style/Numbers_Button"
             android:text="6" />
 
@@ -117,17 +117,17 @@
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/numero_um"
+            android:id="@+id/numero_Um"
             style="@style/Numbers_Button"
             android:text="1" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/numero_dois"
+            android:id="@+id/numero_Dois"
             style="@style/Numbers_Button"
             android:text="2" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/numero_tres"
+            android:id="@+id/numero_Tres"
             style="@style/Numbers_Button"
             android:text="3" />
 
@@ -150,7 +150,7 @@
             android:text="." />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/numero_zero"
+            android:id="@+id/numero_Zero"
             style="@style/Numbers_Button"
             android:text="0" />
 
