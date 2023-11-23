@@ -76,53 +76,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View view) {}
+    public void onClick(View view) {
 
-        /*switch (view.getId()){
-            case R.id.numero_Um:
-                AcrescentarUmaExpressao("0",true);
-                break;
-            case R.id.numero_Um:
-                AcrescentarUmaExpressao("1",true);
-                break;
-            case R.id.numero_Dois:
-                AcrescentarUmaExpressao("2",true);
-                break;
-            case R.id.numero_Tres:
-                AcrescentarUmaExpressao("3",true);
-                break;
-            case R.id.numero_Quatro:
-                AcrescentarUmaExpressao("4",true);
-                break;
-            case R.id.numero_Cinco:
-                AcrescentarUmaExpressao("5",true);
-                break;
-            case R.id.numero_Seis:
-                AcrescentarUmaExpressao("6",true);
-                break;
-            case R.id.numero_Sete:
-                AcrescentarUmaExpressao("7",true);
-                break;
-            case R.id.numero_Oito:
-                AcrescentarUmaExpressao("8",true);
-                break;
-            case R.id.numero_Nove:
-                AcrescentarUmaExpressao("9",true);
-                break;
-            case R.id.ponto:
-                AcrescentarUmaExpressao(".",true);
-                break;
-            case R.id.btn_Somar:
-                AcrescentarUmaExpressao("+",false);
-                break;
-            case R.id.btn_Subtrair:
-                AcrescentarUmaExpressao("-",false);
-                break;
-            case R.id.btn_Multiplicar:
-                AcrescentarUmaExpressao("*",false);
-                break;
-            case R.id.btn_Dividir:
-                AcrescentarUmaExpressao("/",false);
-                break;
-        }*/
+        String expressao = txtExpressao.getText().toString();
+
+        if (expressao.isEmpty()) {
+            expressao = "";
+        } else {
+            expressao += " ";
+        }
+
+        if (view.getId() == R.id.numero_Um) {
+            AcrescentarUmaExpressao("1", true);
+        } else if (view.getId() == R.id.numero_Dois) {
+            AcrescentarUmaExpressao("2", true);
+        } else if (view.getId() == R.id.numero_Tres) {
+            AcrescentarUmaExpressao("3", true);
+        } else if (view.getId() == R.id.numero_Quatro) {
+            AcrescentarUmaExpressao("4", true);
+        } else if (view.getId() == R.id.numero_Cinco) {
+            AcrescentarUmaExpressao("5", true);
+        } else if (view.getId() == R.id.numero_Seis) {
+            AcrescentarUmaExpressao("6", true);
+        } else if (view.getId() == R.id.numero_Sete) {
+            AcrescentarUmaExpressao("7", true);
+        } else if (view.getId() == R.id.numero_Oito) {
+            AcrescentarUmaExpressao("8", true);
+        } else if (view.getId() == R.id.numero_Nove) {
+            AcrescentarUmaExpressao("9", true);
+        } else if (view.getId() == R.id.ponto) {
+            AcrescentarUmaExpressao(".", true);
+        } else if (view.getId() == R.id.btn_Somar) {
+            AcrescentarUmaExpressao("+", false);
+        } else if (view.getId() == R.id.btn_Subtrair) {
+            AcrescentarUmaExpressao("-", false);
+        } else if (view.getId() == R.id.btn_Multiplicar) {
+            AcrescentarUmaExpressao("*", false);
+        } else if (view.getId() == R.id.btn_Dividir) {
+            AcrescentarUmaExpressao("/", false);
+        }
+    }
 }
