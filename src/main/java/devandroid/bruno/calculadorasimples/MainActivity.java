@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         IniciarComponentes();
-        getSupportActionBar();
+        getSupportActionBar().hide();
 
         numeroZero.setOnClickListener(this);
         numeroUm.setOnClickListener(this);
@@ -78,42 +78,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        String expressao = txtExpressao.getText().toString();
-
-        if (expressao.isEmpty()) {
-            expressao = "";
-        } else {
-            expressao += " ";
-        }
-
-        if (view.getId() == R.id.numero_Um) {
+        switch (view.getId()) {
+        case R.id.numero_Um:
+            AcrescentarUmaExpressao("0", true);
+            break;
+        case R.id.numero_Dois:
             AcrescentarUmaExpressao("1", true);
-        } else if (view.getId() == R.id.numero_Dois) {
+            break;
+        case R.id.numero_Tres:
             AcrescentarUmaExpressao("2", true);
-        } else if (view.getId() == R.id.numero_Tres) {
+            break;
+        case R.id.numero_Quatro:
             AcrescentarUmaExpressao("3", true);
-        } else if (view.getId() == R.id.numero_Quatro) {
+            break;
+        case R.id.numero_Cinco:
             AcrescentarUmaExpressao("4", true);
-        } else if (view.getId() == R.id.numero_Cinco) {
+            break;
+        case R.id.numero_Seis:
             AcrescentarUmaExpressao("5", true);
-        } else if (view.getId() == R.id.numero_Seis) {
+            break;
+        case R.id.numero_Sete:
             AcrescentarUmaExpressao("6", true);
-        } else if (view.getId() == R.id.numero_Sete) {
+            break;
+        case R.id.numero_Oito:
             AcrescentarUmaExpressao("7", true);
-        } else if (view.getId() == R.id.numero_Oito) {
+            break;
+        case R.id.numero_Nove:
             AcrescentarUmaExpressao("8", true);
-        } else if (view.getId() == R.id.numero_Nove) {
-            AcrescentarUmaExpressao("9", true);
-        } else if (view.getId() == R.id.ponto) {
+            break;
+        case R.id.ponto:
             AcrescentarUmaExpressao(".", true);
-        } else if (view.getId() == R.id.btn_Somar) {
+            break;
+        case R.id.btn_Somar:
             AcrescentarUmaExpressao("+", false);
-        } else if (view.getId() == R.id.btn_Subtrair) {
+            break;
+        case R.id.btn_Subtrair:
             AcrescentarUmaExpressao("-", false);
-        } else if (view.getId() == R.id.btn_Multiplicar) {
+            break;
+        case R.id.btn_Multiplicar:
             AcrescentarUmaExpressao("*", false);
-        } else if (view.getId() == R.id.btn_Dividir) {
+            break;
+        case R.id.btn_Dividir:
             AcrescentarUmaExpressao("/", false);
-        }
+            break;
     }
 }
