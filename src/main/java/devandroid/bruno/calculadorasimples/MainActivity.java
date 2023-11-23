@@ -8,9 +8,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
-    private Button numeroZero, numeroUm, numerDois, numeroTres, numeroQuatro, numeroCinco, numeroSeis, numeroSete, numeroOito, numeroNove, ponto, soma, subtrair, multiplicar, dividir, igual, limpar;
+    private Button numeroZero, numeroUm, numeroDois, numeroTres, numeroQuatro, numeroCinco, numeroSeis, numeroSete, numeroOito, numeroNove, ponto, soma, subtrair, multiplicar, dividir, igual, limpar;
 
     private TextView txtExpressao, txtResultado;
     private ImageView backspace;
@@ -22,28 +22,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         IniciarComponentes();
         getSupportActionBar().hide();
-
-        numeroZero.setOnClickListener(this);
-        numeroUm.setOnClickListener(this);
-        numerDois.setOnClickListener(this);
-        numeroTres.setOnClickListener(this);
-        numeroQuatro.setOnClickListener(this);
-        numeroCinco.setOnClickListener(this);
-        numeroSeis.setOnClickListener(this);
-        numeroSete.setOnClickListener(this);
-        numeroOito.setOnClickListener(this);
-        numeroNove.setOnClickListener(this);
-        ponto.setOnClickListener(this);
-        soma.setOnClickListener(this);
-        subtrair.setOnClickListener(this);
-        multiplicar.setOnClickListener(this);
-        dividir.setOnClickListener(this);
     }
 
     private void IniciarComponentes() {
         numeroZero = findViewById(R.id.numero_Zero);
         numeroUm = findViewById(R.id.numero_Um);
-        numerDois = findViewById(R.id.numero_Dois);
+        numeroDois = findViewById(R.id.numero_Dois);
         numeroTres = findViewById(R.id.numero_Tres);
         numeroQuatro = findViewById(R.id.numero_Quatro);
         numeroCinco = findViewById(R.id.numero_Cinco);
@@ -73,53 +57,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             txtExpressao.append(string);
             txtResultado.setText("");
         }
-    }
-
-    @Override
-    public void onClick(View view) {
-
-        switch (view.getId()) {
-        case R.id.numero_Um:
-            AcrescentarUmaExpressao("0", true);
-            break;
-        case R.id.numero_Dois:
-            AcrescentarUmaExpressao("1", true);
-            break;
-        case R.id.numero_Tres:
-            AcrescentarUmaExpressao("2", true);
-            break;
-        case R.id.numero_Quatro:
-            AcrescentarUmaExpressao("3", true);
-            break;
-        case R.id.numero_Cinco:
-            AcrescentarUmaExpressao("4", true);
-            break;
-        case R.id.numero_Seis:
-            AcrescentarUmaExpressao("5", true);
-            break;
-        case R.id.numero_Sete:
-            AcrescentarUmaExpressao("6", true);
-            break;
-        case R.id.numero_Oito:
-            AcrescentarUmaExpressao("7", true);
-            break;
-        case R.id.numero_Nove:
-            AcrescentarUmaExpressao("8", true);
-            break;
-        case R.id.ponto:
-            AcrescentarUmaExpressao(".", true);
-            break;
-        case R.id.btn_Somar:
-            AcrescentarUmaExpressao("+", false);
-            break;
-        case R.id.btn_Subtrair:
-            AcrescentarUmaExpressao("-", false);
-            break;
-        case R.id.btn_Multiplicar:
-            AcrescentarUmaExpressao("*", false);
-            break;
-        case R.id.btn_Dividir:
-            AcrescentarUmaExpressao("/", false);
-            break;
     }
 }
