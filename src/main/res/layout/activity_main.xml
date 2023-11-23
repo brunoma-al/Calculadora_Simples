@@ -7,11 +7,10 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- TextViews ficam fora do contêiner pai -->
     <TextView
-        android:id="@+id/txt_Expressao"
+        android:id="@+id/screen"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="140dp"
         android:text=""
         android:textSize="55sp"
         android:textColor="@color/black"
@@ -19,22 +18,9 @@
         android:layout_marginEnd="10dp"
         android:ellipsize="start"
         android:singleLine="true"
+        android:layout_above="@+id/nums"
         />
 
-    <TextView
-        android:id="@+id/txt_Resultado"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text=""
-        android:textSize="35sp"
-        android:textColor="@color/black"
-        android:gravity="end"
-        android:layout_marginEnd="10dp"
-        android:ellipsize="end"
-        android:maxLines="1"
-        />
-
-    <!-- Contêiner pai para os LinearLayouts -->
     <LinearLayout
         android:id="@+id/nums"
         android:layout_width="match_parent"
@@ -42,7 +28,6 @@
         android:layout_weight="3"
         android:orientation="vertical">
 
-        <!-- Primeiro LinearLayout -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -62,7 +47,6 @@
 
         </LinearLayout>
 
-        <!-- Segundo LinearLayout -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -91,7 +75,6 @@
 
         </LinearLayout>
 
-        <!-- Terceiro LinearLayout -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -120,7 +103,6 @@
 
         </LinearLayout>
 
-        <!-- Quarto LinearLayout -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -149,7 +131,6 @@
 
         </LinearLayout>
 
-        <!-- Quinto LinearLayout -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
